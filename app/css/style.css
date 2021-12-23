@@ -140,7 +140,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -149,7 +149,7 @@ body {
   -webkit-transform-style: preserve-3d;
   background-position: center;
   -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0); */
 }
 
 .slide-container .slide-page .wrap {
@@ -220,9 +220,17 @@ body {
   margin-left: 0px !important; 
   line-height: inherit;
   }
-  .page1 span {
-    font-size: 1.3rem;
-    }
+.page1 span {
+  font-size: 1.2rem;
+  }
+.page1 .card1 .section-1-desktop{
+  width: 78%;
+  height: auto;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .container .row .col .wrapper .slogan h2, .container-fluid .row .col .wrapper .slogan h2 {
   font-weight: bold;
   margin-left: 8px;
@@ -293,6 +301,7 @@ body {
   bottom: 20px;
   width: 100%;
 color:#fff;
+bottom:80px;
 }
 .section5-title {
   font-size:3rem;
@@ -454,7 +463,7 @@ color:#fff;
   padding-bottom:3%;
 }
 .section3-content {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #707070;
   line-height: 2em;
 }
@@ -584,8 +593,8 @@ color:#fff;
 
 .section2-card-content {
   color: #8a8686;
-  font-size:12px;
-  line-height:18px;
+  font-size:1.2rem;
+  /* line-height:18px; */
   padding:15px;
 }
 
@@ -593,7 +602,7 @@ color:#fff;
   padding-top:10px;
   color:#f58f8e;
   letter-spacing: 1px;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 .section4-right2{
   margin-top:-50%;
@@ -623,6 +632,11 @@ color:#fff;
           align-items: center;
   background-color:#fcf0f4;
 }
+.page4 .card1 .section-4-desktop{
+  width: 40%;
+  height: auto;
+  position: absolute;
+}
 .image-blurred-edge {
   box-shadow: inset -2px -12px 20px 30px #fcf0f4;
     width: 100%;
@@ -634,12 +648,12 @@ color:#fff;
 }
 
 .page4 h4 {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   /* padding-left: 58px; */
 }
 .page4 .section4-content-title {
   color:#f58f8e;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 .page4 .section4-content-title.step2_con{
   float:left;
@@ -2242,7 +2256,7 @@ form .selector p {
   background-color:#ffe9e8;
 }
 .page6 .section6-card{
-  padding-top: 28px;
+  /* padding-top: 28px; */
   align-items: baseline !important;
 }
 .page6 .with-card{
@@ -2278,6 +2292,9 @@ form .selector p {
 }
 
 .page6 .services input{
+  display: none;
+}
+.page6 .service .selected {
   display: none;
 }
 .page6 input#email{
@@ -2332,22 +2349,14 @@ label img {
   transform-origin: 50% 50%;
 }
 
-:checked+label {
-  border-color: #ddd;
-}
-
-:checked+label::before {
-  content: "✓";
-  background-image: url(../images/1216/300.svg);
-  transform: scale(1);
-}
-
-:checked+label img {
-  transform: scale(0.9);
-  box-shadow: 0 0 5px #333;
-  z-index: -1;
-}
+/* z */
 @media (min-width: 576px)  {
+  .section1-main-img {
+    position: absolute;
+    min-width: 200px;
+    right: 0;
+    /* transform: scale(0.8); */
+  }
   .page1 .container-fluid.step{
     position: absolute;
     right: 0px;
@@ -2400,7 +2409,15 @@ label img {
     font-size: 1.2rem;
   }
 }
-
+@media (min-width: 1024px) and (orientation: landscape) {
+  .section4-mobile {
+    width: 70%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+}
 @media (max-width: 1024px) {
   .wrapper {
     width: 100%;
@@ -2425,7 +2442,7 @@ label img {
     margin-top: 20px;
   }
   .my-btn-wrap .my-btn {
-    line-height: 50px;
+    line-height: 44px;
     font-size: 18px;
   }
   .container-fluid .row .col .wrapper .slogan h2 {
@@ -2462,7 +2479,9 @@ label img {
     height:90px;
     font-weight: bold;
   }
-  
+  .page4 .step1_content{
+    margin-top: 0; 
+  }
   .section4-info2 {
     margin-left: 0;
     margin-top: 55%;
@@ -2492,11 +2511,12 @@ label img {
     margin-top:200%;
   }
   .section4-right2 {
-    margin-top:-180%;
+    /* margin-top:-180%; */
   }
   .section4-step1-container {
-    display:block;margin-top: 65%;
-    margin-right: 1%;
+    display:block;
+    margin-top: 65%;
+    /* margin-right: 1%; */
   }
   .section4-step{
     width:80%;
@@ -2516,17 +2536,8 @@ label img {
   .section4-info-small {
     font-size: 0.8rem;
 }
-  .section4-card {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-  .section4-card .card{
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    margin-left: 0;
-    margin-top: 0;
-  }
+  
+
   .mobile-top {
     margin-top: 30%;
   }
@@ -2552,8 +2563,8 @@ label img {
     margin-top: 30%;
   }
   .my-btn-wrap .my-btn {
-    font-size:22px !important;
-    margin-top: -15% !important;
+    font-size:1rem !important;
+    /* margin-top: -15% !important; */
   }
   /* .section5-middle img{
     width: 100%;
@@ -2591,15 +2602,13 @@ label img {
     line-height: 20px;
     padding: 10px;
   }
-  .store-download {
+  /* .store-download {
     display:none;
-  }
+  } */
   .mobile-app {
-    display:block;
+    /* display:block; */
   }
-  .section1-right-col {
-    margin-left:-6% !important;
-  }
+  
   .main-visual {
     top: 77%;
   }
@@ -2638,7 +2647,7 @@ label img {
     height:auto;
   }
   .container-fluid .row .col .wrapper .slogan h2 {
-    font-size: 35px;
+    font-size: 1.5rem;
   }
   .carousel-slide .my-btn-wrap {
     height: 50px;
@@ -2678,7 +2687,7 @@ label img {
     margin-top: 0; 
   }
   .page4 .step3{
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
   .image-blurred-edge{
     display: none;
@@ -2699,7 +2708,7 @@ label img {
     /* margin-top: 90%; */
 }
   .section4-right2 {
-    margin-bottom: 566%;
+    /* margin-bottom: 566%; */
 }
 .section4-step{
   width:40%;
@@ -2948,7 +2957,7 @@ label img {
     padding: 190px 20px;
   }
 }
-@media  (max-width: 1024px){
+@media  (max-width: 750px){
   .section2-row {
     display:none;
   }
@@ -2959,9 +2968,18 @@ label img {
     display: flex;
   }
   .page2-title {
-    margin-top:-12% !important;
+    margin-top:-4% !important;
+  }  .section4-card .card{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0;
+    margin-top: 0;
   }
-
+  .section4-card {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
   .section2-mobile {
     display:block;
     width: 96%;
@@ -2971,12 +2989,17 @@ label img {
     text-align: center;
   }
   .section2-card-content {
-    font-size:11px;
-    line-height: 17px;
+    font-size:1rem;
+    /* line-height: 17px; */
   }
 }
-@media (max-width: 575px) {
 
+@media (max-width: 575px) {
+  .page1 .container-fluid .row .col .wrapper, .page1 .container-fluid .row .col .wrapper h2 {
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top:60%;
+  }
   .section2-row {
     display:none;
   }
@@ -2987,7 +3010,7 @@ label img {
     display: flex;
   }
   .page2-title {
-    margin-top:-12% !important;
+    margin-top:-6% !important;
     height: 50% !important;
   }
   .page6 .services_title h3{
@@ -2997,8 +3020,9 @@ label img {
     font-size: 0.6rem;
   }
   .page6 .service .label_text {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
 }
+
 .page6 .submit_div {
   width: 32%;
   float: right;
@@ -3010,7 +3034,7 @@ label img {
   .section2-mobile {
     display:block;
     width: 96%;
-    margin-top:-40%;
+    margin-top:-30%;
     margin-left:2%;
     margin-right: 2%;
     text-align: center;
@@ -3034,8 +3058,12 @@ label img {
     /* width: 60%; */
   }
   .mobile-app {
+    display:block;
     width: 30%;
     margin-left: 21px;
+}
+.store-download {
+  display:none;
 }
   .apple-download-button {
     /* margin-top: -50%;
@@ -3170,11 +3198,11 @@ px
 }
 
 @media (max-width: 468px) {
-  .page1 .container-fluid .row .col .wrapper, .page1 .container-fluid .row .col .wrapper h2 {
-    font-size: 16px;
-    letter-spacing: 4px;
-    margin-top:60%;
-  }
+  .page6 .submit_div .sms {
+    font-size: 0.5rem;
+    color: #707070;
+    display: inline;
+}
   .container.form {
     padding-left: 20px;
     padding-right: 20px;
@@ -3214,6 +3242,9 @@ px
 }
 
 @media (max-width: 411px) and (orientation: portrait) {
+  .section1-right-col {
+    margin-left:-14% !important;
+  }
   .with-card .wrapper .card .content .step {
     display: block;
   }
