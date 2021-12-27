@@ -298,10 +298,10 @@ body {
 }
 .section5-middle {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   width: 100%;
-color:#fff;
-bottom:80px;
+  height: 75px;
+  color: #fff;
 }
 .section5-title {
   font-size:3rem;
@@ -309,7 +309,7 @@ bottom:80px;
   color:#fff;
 }
 .section5-middle img{
- width:5%;
+ width:3%;
   }
 .section5-middle span{
     color: #fff;
@@ -480,6 +480,9 @@ bottom:80px;
   display: inline;
 }
 .image-hide {
+  max-width: 436px;
+  right: 0;
+  margin: auto;
   top: -100px;
   position: absolute;
   left: 0;
@@ -2395,7 +2398,12 @@ label img {
 
 
   
+@media (min-width: 1600px) {
+  .section5-middle {
 
+    height: 160px;
+}
+}
 
 @media (max-width: 1600px) {
   .my-btn-wrap {
